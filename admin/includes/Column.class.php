@@ -13,13 +13,14 @@ class Column
     private $fieldRef;
     private $fieldValue;
     private $caseValues;
+    private array $values = [];
 
     public function __construct($name, $label, $type, $table, $fieldRef, $fieldValue, $caseValues)
     {
         $this->name = $name;
         $this->label = $label;
         $this->type = $type;
-        $this->values = array();
+        $this->values = [];
         $this->table = $table;
         $this->fieldRef = $fieldRef;
         $this->fieldValue = $fieldValue;

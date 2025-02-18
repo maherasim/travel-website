@@ -58,16 +58,19 @@ function checkFields($pms_db, $fields, $id)
 						}                        
 					break;
 				}
-				
 				if($field->isUnique() && $value != '' && $pms_db != false){
 					$query_unique = 'SELECT * FROM pm_'.$tableName.' WHERE `'.$fieldName.'` = \''.$value.'\' AND id != ';
-					$query_unique .= ($tableName == MODULE) ? $id : $fields_table['fields']['id']->getValue(false, $index);
-					if(pms_db_column_exists($pms_db, 'pm_'.$tableName, 'lang')) $query_unique .= ' AND lang = '.PMS_DEFAULT_LANG;
-					$res_unique = $pms_db->query($query_unique);
-					if($res_unique !== false && $pms_db->last_row_count() > 0){
+					$id=($tableName == MODULE) ? $id : $fields_table['fields']['id']->getValue(false, $index);
+                    if($id!="")
+                    {
+                      $query_unique .= $id;
+					 if(pms_db_column_exists($pms_db, 'pm_'.$tableName, 'lang')) $query_unique .= ' AND lang = '.PMS_DEFAULT_LANG;
+                     $res_unique = $pms_db->query($query_unique);
+					 if($res_unique !== false && $pms_db->last_row_count() > 0){
 						$field->setNotice($pms_texts['VALUE_ALREADY_EXISTS'], $index);
 						$valid = false;
-					}
+					 }
+                    }
 				}
             }
         }

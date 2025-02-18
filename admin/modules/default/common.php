@@ -92,7 +92,6 @@ if(NB_FILES > 0){
         $_SESSION['msg_notice'][] = $msg_notice;
     }
 }
-
 if(isset($_GET['view'])){
     $view = $_GET['view'];
     if($view == 'list'){

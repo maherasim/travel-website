@@ -301,7 +301,6 @@ function pms_img_resize($source_file, $dest_dir, $max_w, $max_h, $stamp_file = n
             
             $new_sw = round($sw*$new_w/MAX_W_BIG);
             $new_sh = $new_sw*$sh/$sw;
-                
             switch($s_type){
                 case IMAGETYPE_JPEG : $tmp_stamp = imagecreatefromjpeg($stamp_file); break;
                 case IMAGETYPE_PNG : $tmp_stamp = imagecreatefrompng($stamp_file); break;
@@ -483,7 +482,6 @@ function pms_recursive_rmdir($dirname, $contentOnly = false, $followLinks = fals
 function pms_db_getRequestSelect($pms_db, $table, $cols, $q, $condition_sup = '', $order = '', $limit = '', $offset = '')
 {
     $result = $pms_db->query('SELECT * FROM '.$table.' LIMIT 1');
-
     $q = mb_strtoupper($q);
     $q = str_replace('%20', ' ', $q);
     $q = preg_replace('/\s\s+/', '', $q);
@@ -520,7 +518,6 @@ function pms_db_getRequestSelect($pms_db, $table, $cols, $q, $condition_sup = ''
     if($order != '') $query .= ' ORDER BY '.$order;
     if($limit != '') $query .= ' LIMIT '.$limit;
     if($offset != '') $query .= ' OFFSET '.$offset;
-    
     return $query;
 }
 /***********************************************************************
@@ -772,12 +769,19 @@ function pms_text_format($str, $tolower = true, $sep = '-')
 {
     $str = pms_cleanAccent($str);
     $str = preg_replace('/([^a-z0-9]+)/i', $sep, $str);
-    $str = preg_replace('/'.$sep.'['.$sep.']+/', $sep, $str);
+    $str = preg_replace('/' . preg_quote($sep, '/') . '[' . preg_quote($sep, '/') . ']+/', $sep, $str);
     $str = trim($str, $sep);
-    if($tolower) $str = strtolower($str);
-    $str = utf8_encode($str);
+    
+    if ($tolower) {
+        $str = strtolower($str);
+    }
+    
+    // Replace utf8_encode() with mb_convert_encoding() if needed
+    $str = mb_convert_encoding($str, 'UTF-8', 'ISO-8859-1');
+
     return $str;
 }
+
 /***********************************************************************
  * pms_format_string() formats a string
  *

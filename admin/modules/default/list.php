@@ -34,7 +34,6 @@ $_SESSION['offset'] = $offset;
 
 // Inclusions
 require_once(SYSBASE.PMS_ADMIN_FOLDER.'/includes/fn_list.php');
-
 if($pms_db !== false){
     // Initializations
     $cols = getCols();
@@ -74,7 +73,6 @@ if($pms_db !== false){
         if($result_lang !== false)
             $total_lang = $pms_db->last_row_count();
     }
-
     // Getting filters values
     if(isset($_SESSION['module_referer']) && $_SESSION['module_referer'] !== MODULE){
         unset($_SESSION['filters']);
@@ -116,17 +114,14 @@ if($pms_db !== false){
     }
     
     $tmp_order = $order;
-    if(!empty($tmp_order)) $tmp_order = '`'.str_replace(', ', '`, `', $tmp_order).'`';
+    if(!empty($tmp_order)) $tmp_order = '`'.str_replace(' , ', '`, `', $tmp_order).'`';
     $tmp_order .= ' '.$sort;
-    
     $query_search = pms_db_getRequestSelect($pms_db, 'pm_'.MODULE, getSearchFieldsList($cols), $q_search, $condition, $tmp_order);
-
     $result_total = $pms_db->query($query_search);
     if($result_total !== false)
         $total = $pms_db->last_row_count();
         
     if($limit > 0) $query_search .= ' LIMIT '.$limit.' OFFSET '.$offset;
-
     $result = $pms_db->query($query_search);
     if($result !== false)
         $total_page = $pms_db->last_row_count();
@@ -364,7 +359,6 @@ $csrf_token = pms_get_token('list'); ?>
                                             <tbody>
                                                 <?php
                                                 if($result !== false){
-													
 													if(NB_FILES > 0){
 														$query_img = 'SELECT * FROM pm_'.MODULE.'_file WHERE type = \'image\' AND id_item = :id AND file != \'\'';
 														if(MULTILINGUAL) $query_img .= ' AND lang = '.PMS_DEFAULT_LANG;
@@ -399,7 +393,6 @@ $csrf_token = pms_get_token('list'); ?>
                                                             if(NB_FILES > 0){
                                                                 if($result_img->execute() !== false && $pms_db->last_row_count() > 0){
                                                                     $row_img = $result_img->fetch();
-                                                                
                                                                     $filename_img = $row_img['file'];
                                                                     $id_img_file = $row_img['id'];
                                                                     $label = $row_img['label'];

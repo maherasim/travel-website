@@ -412,7 +412,7 @@ function delete_item($pms_db, $id, $redirection = true)
 {
     global $pms_texts;
     if(NB_FILES > 0){
-    
+        
         $result_file = $pms_db->query('SELECT file, id FROM pm_'.MODULE.'_file WHERE id_item = '.$id);
         if($result_file !== false){
         
@@ -426,7 +426,6 @@ function delete_item($pms_db, $id, $redirection = true)
     }
     
     if(RANKING) update_rank($pms_db, 'pm_'.MODULE, $id);
-    
     if($pms_db->query('DELETE FROM pm_'.MODULE.' WHERE id = '.$id) !== false)
         if($redirection) $_SESSION['msg_success'][] = $pms_texts['DELETE_SUCCESS'];
     else
@@ -489,7 +488,6 @@ function delete_file($pms_db, $id_file, $redirection = true)
         $filename = $row['file'];
         $id_item = $row['id_item'];
         $type_item = $row['type'];
-        
         if($type_item == 'other'){
     
             if(is_file(SYSBASE.'medias/'.MODULE.'/other/'.$id_file.'/'.$filename))
@@ -515,8 +513,7 @@ function delete_file($pms_db, $id_file, $redirection = true)
             if(is_dir(SYSBASE.'medias/'.MODULE.'/small/'.$id_file))
                 rmdir(SYSBASE.'medias/'.MODULE.'/small/'.$id_file);
         }
-        
-        update_rank($pms_db, MODULE.'_file', $id_file, $id_item);
+        update_rank($pms_db, 'pm_'.MODULE.'_file', $id_file, $id_item);
             
         if($pms_db->query('DELETE FROM pm_'.MODULE.'_file WHERE id = '.$id_file) !== false)
             if($redirection) $_SESSION['msg_success'][] = $filename.' - '.$pms_texts['DELETE_SUCCESS'];

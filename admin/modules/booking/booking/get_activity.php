@@ -13,7 +13,6 @@ require_once('../../../../common/lib.php');
 require_once('../../../../common/define.php');
 
 $response = array();
-
 if($pms_db !== false && isset($_POST['id']) && is_numeric($_POST['id'])){
     $result_activity = $pms_db->query('SELECT * FROM pm_activity WHERE id = '.$_POST['id'].' AND lang = '.PMS_DEFAULT_LANG);
 	if($result_activity !== false && $pms_db->last_row_count() > 0){

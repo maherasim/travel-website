@@ -660,7 +660,9 @@ if(isset($_POST['add_prices']) && (in_array('add', $permissions) || in_array('al
                                                     $d = gmdate('N', $date); ?>
                                                     
                                                     <div class="timeline-cel timeline-d<?php if($d == 6 || $d == 7) echo ' bg-warning'; ?><?php if($date == $today) echo ' today'; ?>">
-                                                        <?php echo mb_strtoupper(gmstrftime('<b>%a</b><br>%d/%m', $date)); ?><br>
+                                                        <?php // echo mb_strtoupper(gmstrftime('<b>%a</b><br>%d/%m', $date)); 
+                                                                echo mb_strtoupper('<b>' . gmdate('D') . '</b><br>' . gmdate('d/m', $date));
+                                                        ?><br>
                                                         <?php
                                                         if($checkin > 0){ ?>
                                                             <a href="popup-check-in-out.php" class="ajax-popup-link" data-params="date=<?php echo $date; ?>">
