@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 define('PMS_SITE_TITLE', 'Travel Website');
-=======
-define('PMS_SITE_TITLE', 'BEN_Travel');
->>>>>>> 976aa5f8dfa6b0a531699e153e5f288adc590677
 define('PMS_TIME_ZONE', 'Europe/London');
 define('PMS_DATE_FORMAT', '%F');
 define('PMS_TIME_FORMAT', '%I:%M %P');
@@ -16,28 +12,16 @@ define('PMS_MAINTENANCE_MODE', '0');
 define('PMS_MAINTENANCE_MSG', '<h1><i class=\"fa fa-rocket\"></i> Coming soon...</h1><p>We are sorry, our website is down for maintenance.</p>');
 define('PMS_TEMPLATE', 'default');
 define('PMS_OWNER', '');
-<<<<<<< HEAD
 define('PMS_EMAIL', 'solutionweb386@gmail.com');
-=======
-define('PMS_EMAIL', 'asimriazasim107@gmail.com');
->>>>>>> 976aa5f8dfa6b0a531699e153e5f288adc590677
 define('PMS_ADDRESS', '');
 define('PMS_PHONE', '');
 define('PMS_MOBILE', '');
 define('PMS_FAX', '');
-<<<<<<< HEAD
 define('PMS_DB_NAME', 'my_database');
 define('PMS_DB_HOST', 'localhost');
 define('PMS_DB_PORT', '3306');
 define('PMS_DB_USER', 'Ahsan');
 define('PMS_DB_PASS', 'Ahsan@786');
-=======
-define('PMS_DB_NAME', 'kommodor_hotel');
-define('PMS_DB_HOST', 'localhost');
-define('PMS_DB_PORT', '3306');
-define('PMS_DB_USER', 'kommodor_hotel');
-define('PMS_DB_PASS', 'Daniela972757');
->>>>>>> 976aa5f8dfa6b0a531699e153e5f288adc590677
 define('PMS_SENDER_EMAIL', '');
 define('PMS_SENDER_NAME', '');
 define('PMS_USE_SMTP', '0');
@@ -73,8 +57,4 @@ define('PMS_RAZORPAY_KEY_SECRET', '');
 define('PMS_ENABLE_ICAL', '1');
 define('PMS_ENABLE_AUTO_ICAL_SYNC', '1');
 define('PMS_ICAL_SYNC_INTERVAL', 'daily'); // daily | hourly
-<<<<<<< HEAD
 define('PMS_ICAL_SYNC_CLOCK', '3'); // 0-23h mode, required if PMS_ICAL_SYNC_INTERVAL = daily
-=======
-define('PMS_ICAL_SYNC_CLOCK', '3'); // 0-23h mode, required if PMS_ICAL_SYNC_INTERVAL = daily
->>>>>>> 976aa5f8dfa6b0a531699e153e5f288adc590677
