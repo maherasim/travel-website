@@ -39,9 +39,8 @@ if(isset($pms_db) && $pms_db !== false){
     $pms_article_id = 0;
     $result_article_file = $pms_db->prepare('SELECT * FROM pm_article_file WHERE id_item = :article_id AND checked = 1 AND lang = '.PMS_DEFAULT_LANG.' AND type = \'image\' AND file != \'\' ORDER BY `rank` LIMIT 1');
     $result_article_file->bindParam(':article_id', $pms_article_id);
-
-    foreach($result_article as $i => $row){
-                                
+    $count = 1;
+    foreach($result_article as $i => $row){                   
         $pms_article_id = $row['id'];
         $article_title = $row['title'];
         $article_alias = $row['alias'];
@@ -52,43 +51,76 @@ if(isset($pms_db) && $pms_db !== false){
         
         $article_alias = DOCBASE.$page_alias.'/'.pms_text_format($article_alias);
         
-        $html .= '
-        <article class="col-sm-4 isotopeItem'.$article_tags.'" itemscope itemtype="http://schema.org/Article">
-            <div class="isotopeInner">
-                <a itemprop="url" href="'.$article_alias.'">';
-                    
-                    if($result_article_file->execute() !== false && $pms_db->last_row_count() > 0){
-                        $row = $result_article_file->fetch(PDO::FETCH_ASSOC);
-                        
-                        $file_id = $row['id'];
-                        $filename = $row['file'];
-                        $label = $row['label'];
-                        
-                        $realpath = SYSBASE.'medias/article/medium/'.$file_id.'/'.$filename;
-                        $thumbpath = DOCBASE.'medias/article/medium/'.$file_id.'/'.$filename;
-                        $zoompath = DOCBASE.'medias/article/big/'.$file_id.'/'.$filename;
-                        
-                        if(is_file($realpath)){
-                            $html .= '
-                            <figure class="more-link">
-                                <img alt="'.$label.'" src="'.$thumbpath.'" class="img-responsive">
-                                <span class="more-action">
-                                    <span class="more-icon"><i class="fa fa-link"></i></span>
-                                </span>
-                            </figure>';
-                        }
-                    }
+        if($pms_page_id != 5){
                     $html .= '
-                    <div class="isotopeContent">
-                        <div class="text-overflow">
-                            <h3 itemprop="name">'.$article_title.'</h3>';
-                            if($article_text != '') $html .= '<p>'.$article_text.'</p>';
+                <article class="col-sm-4 isotopeItem'.$article_tags.'" itemscope itemtype="http://schema.org/Article">
+                    <div class="isotopeInner">
+                        <a itemprop="url" href="'.$article_alias.'">';
+                            
+                            if($result_article_file->execute() !== false && $pms_db->last_row_count() > 0){
+                                $row = $result_article_file->fetch(PDO::FETCH_ASSOC);
+                                
+                                $file_id = $row['id'];
+                                $filename = $row['file'];
+                                $label = $row['label'];
+                                
+                                $realpath = SYSBASE.'medias/article/medium/'.$file_id.'/'.$filename;
+                                $thumbpath = DOCBASE.'medias/article/medium/'.$file_id.'/'.$filename;
+                                $zoompath = DOCBASE.'medias/article/big/'.$file_id.'/'.$filename;
+                                
+                                if(is_file($realpath)){
+                                    $html .= '
+                                    <figure class="more-link">
+                                        <img alt="'.$label.'" src="'.$thumbpath.'" class="img-responsive">
+                                        <span class="more-action">
+                                            <span class="more-icon"><i class="fa fa-link"></i></span>
+                                        </span>
+                                    </figure>';
+                                }
+                            }
                             $html .= '
-                        </div>
+                            <div class="isotopeContent">
+                                <div class="text-overflow">
+                                    <h3 itemprop="name">'.$article_title.'</h3>';
+                                    if($article_text != '') $html .= '<p>'.$article_text.'</p>';
+                                    $html .= '
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-        </article>';
+                </article>';
+        } else {
+                $html .= '<div class="content-grid isotopeItem'.$article_tags.'">';
+                // First photo section
+                if($result_article_file->execute() !== false && $pms_db->last_row_count() > 0){
+                    $row = $result_article_file->fetch(PDO::FETCH_ASSOC);
+                    
+                    $file_id = $row['id'];
+                    $filename = $row['file'];
+                    $label = $row['label'];
+                    
+                    $thumbpath = DOCBASE.'medias/article/medium/'.$file_id.'/'.$filename;
+                    if($count % 2 == 0){
+                        $html .= '<div class="text-section-wide">
+                            <h2>'.htmlspecialchars($article_title).'</h2>
+                            <p>'.htmlspecialchars($article_text).'</p>
+                        </div>
+                        <div class="photo-section-small">
+                            <img src="'.htmlspecialchars($thumbpath).'" alt="'.htmlspecialchars($label).'">
+                        </div>';
+                    } else {
+                        $html .= '<div class="photo-section">
+                                    <img src="'.htmlspecialchars($thumbpath).'" alt="'.htmlspecialchars($label).'">
+                                </div>
+                                <div class="text-section">
+                                    <h2>'.htmlspecialchars($article_title).'</h2>
+                                    <p>'.htmlspecialchars($article_text).'</p>
+                                </div>';
+                    }
+                    $html .= '</div>';
+                }
+        }
+        $count++;
     }
     if(isset($_POST['ajax']) && $_POST['ajax'] == 1)
         echo json_encode(array('html' => $html));
