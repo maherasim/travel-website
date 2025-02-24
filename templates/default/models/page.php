@@ -26,7 +26,7 @@ require(pms_getFromTemplate('common/header.php', false)); ?>
             <div class="alert alert-success" style="display:none;"></div>
             <div class="alert alert-danger" style="display:none;"></div>
             
-            <div class="row">
+            <div class="row page-desc">
                 <?php
                 $widgetsLeft = pms_getWidgets('left', $pms_page_id);
                 $widgetsRight = pms_getWidgets('right', $pms_page_id);
@@ -51,7 +51,7 @@ require(pms_getFromTemplate('common/header.php', false)); ?>
                 } ?>
             </div>
 
-            <div class="row">
+            <div class="row card-sect">
                 <?php
                 $lz_offset = 1;
                 $lz_limit = 9;

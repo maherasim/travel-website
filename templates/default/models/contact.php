@@ -142,6 +142,7 @@ require(pms_getFromTemplate('common/header.php', false)); ?>
                         </div>
                     </div>
                     <div class="col-sm-5">
+                        hello
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="fas fa-fw fa-question"></i></div>
@@ -176,7 +177,7 @@ require(pms_getFromTemplate('common/header.php', false)); ?>
                 <div class="col-sm-3">
                     <div class="hotBox" itemscope itemtype="http://schema.org/Corporation">
                         <h2 itemprop="name"><?php echo PMS_OWNER; ?></h2>
-                        <address>
+                        <address class="contact-info">
                             <p>
                                 <?php if(PMS_ADDRESS != '') : ?><span class="fas fa-fw fa-map-marker"></span> <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?php echo nl2br(PMS_ADDRESS); ?></span><br><?php endif; ?>
 								<?php if(PMS_PHONE != "") : ?><span class="fas fa-fw fa-phone"></span> <a href="tel:<?php echo PMS_PHONE; ?>" itemprop="telephone" dir="ltr"><?php echo PMS_PHONE; ?></a><br><?php endif; ?>

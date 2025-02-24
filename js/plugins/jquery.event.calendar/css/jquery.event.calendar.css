@@ -90,11 +90,13 @@
 .hb-day:not(.hb-day-name):not(:empty){
 	background-color: #ddd;
 }
-.hb-day.hb-day-name{
-	margin-bottom: 2px;
-	color: #333;
-	font-size: 11px;
+.hb-day.hb-day-name {
+    margin-bottom: 2px;
+    color: #333;
+    font-size: 12px;
+    font-family: Georgia, serif;
 }
+
 .hb-day.hb-day-active{
 	color: #fff;
 	background-color: #EA8A8A!important;
