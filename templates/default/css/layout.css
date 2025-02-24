@@ -10,18 +10,18 @@ body {
 
 @font-face {
     font-family: 'Segoe UI';
-    src: url('Font/SegoeUI-SemiBold.eot');
-    src: local('Font/Segoe UI Semibold'), local('SegoeUI-SemiBold'),
-        url('Font/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('Font/SegoeUI-SemiBold.woff2') format('woff2'),
-        url('Font/SegoeUI-SemiBold.woff') format('woff'),
-        url('Font/SegoeUI-SemiBold.ttf') format('truetype');
-    font-weight: 600;
+    src: url('SegoeUI-Bold.eot');
+    src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
+        url('SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SegoeUI-Bold.woff2') format('woff2'),
+        url('SegoeUI-Bold.woff') format('woff'),
+        url('SegoeUI-Bold.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
 }
 body {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 @media(max-width:991px) {
@@ -40,7 +40,7 @@ h3,
     margin-top: 0;
     text-transform: uppercase;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
@@ -329,7 +329,7 @@ blockquote::before {
     
     margin-right: 0.5em;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
      
 }
 
@@ -338,7 +338,7 @@ blockquote::after {
     
     margin-left: 0.5em;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 blockquote p {
@@ -498,7 +498,7 @@ blockquote p {
     position: absolute;
     right: 10px;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 .navbar-nav>li>a.hasSubMenu::after {
@@ -555,7 +555,7 @@ li.Nactive>ul {
    
     line-height: 30px !important;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 li.Nactive>.dropdown-btn::after {
@@ -629,7 +629,7 @@ li.Nactive>.dropdown-btn::after {
 
 .breadcrumb a::after {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     content: "";
     padding: 0 4px 0 6px;
      
@@ -957,7 +957,7 @@ body[dir="rtl"] .labels {
 
 .lazy-more-btn::before {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     content: "";
     margin-right: 0.5em;
     font-size: 24px;
@@ -1031,7 +1031,7 @@ body[dir="rtl"] .labels {
 
 .sharrre .share::before {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     content: "";
     margin-right: 6px;
     font-size: 18px;
@@ -1137,7 +1137,7 @@ p.focus-p {
 
 #pages-list li a::before {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     content: '';
     margin-right: 10px;
    
@@ -1164,7 +1164,7 @@ ul.nostyle {
     position: absolute;
     left: 4px;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     content: '';
     margin-right: 10px;
   
@@ -1466,13 +1466,13 @@ body#page-maintenance {
 
 .contact-info {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     font-size: 12px;
 }
 
 .hb-days {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 .hb-day {
@@ -1481,39 +1481,39 @@ body#page-maintenance {
 
 #mainFooter #footer .widget-title {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     font-size: 16px;
 }
 
 #mainFooter #footer p {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     font-size: 12px;
 }
 
 .card-sect .isotopeContent p {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     font-size: 12px;
 }
 
 #mainHeader #mainMenu ul li a,
 .mainHeader #secondMenu ul li a {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
     font-size: 16px !important;
 }
 
 .page-desc p {
     font-size: 12px;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 .page-desc p {
     font-size: 12px;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 /* card grid layout */
@@ -1522,7 +1522,7 @@ body#page-maintenance {
     margin-bottom: 2rem;
     line-height: 1.8;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 
@@ -1560,7 +1560,7 @@ body#page-maintenance {
     font-size: 12px;
     line-height: 1.8;
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 .text-section-wide {
