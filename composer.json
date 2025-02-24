@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "phpstan/phpstan": "*"
+    },
+    "require": {
+        "matthiasmullie/minify": "*"
+    }
+}

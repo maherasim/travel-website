@@ -1200,4 +1200,12 @@ body#page-maintenance {
     .photo-section-small {
         grid-column: auto;
     }
+<<<<<<< HEAD
+=======
+}
+
+.isotopeWrapper.loaded .isotopeItem {
+    display:flex;
+    gap: 45px;
+>>>>>>> d1e0643 (added some changes in ui)
 }
