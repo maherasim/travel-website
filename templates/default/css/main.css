@@ -24,6 +24,7 @@ h1, .h1 {
 }
 h3, .h3, .widget-title {
     font-size: 18px;
+    font-family: Verdana;
     margin-top: 0;
 }
 /****************** HEADERS ******************/
