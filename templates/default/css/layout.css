@@ -586,7 +586,13 @@ li.Nactive>.dropdown-btn::after {
     float: right;
     border-radius: 0;
 }
-
+@font-face {
+    font-family: 'segoeuithibd'!important; /* Name to reference later */
+    src: url('Font/segoeuithibd.ttf') format('woff2') ,
+         url('Font/segoeuithibd.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .searchWrapper .form-control:focus {
     box-shadow: none;
 }

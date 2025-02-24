@@ -449,7 +449,7 @@ aside h4 {
     min-height: 108px;
     max-height: 400px;
     font-size: 12px;
-    font-family: Verdana;
+    font-family: 'segoeuithibd', sans-serif !important;
     overflow: hidden;
     position: relative;
 }
