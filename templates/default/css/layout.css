@@ -593,6 +593,9 @@ li.Nactive>.dropdown-btn::after {
     font-weight: normal;
     font-style: normal;
 }
+body {
+    font-family: 'segoeuithibd'!important;
+}
 .searchWrapper .form-control:focus {
     box-shadow: none;
 }
