@@ -586,15 +586,21 @@ li.Nactive>.dropdown-btn::after {
     float: right;
     border-radius: 0;
 }
+ 
 @font-face {
-    font-family: 'segoeuithibd'!important; /* Name to reference later */
-    src: url('Font/segoeuithibd.ttf') format('woff2') ,
-         url('Font/segoeuithibd.ttf') format('woff');
-    font-weight: normal;
+    font-family: 'Segoe UI';
+    src: url('Font/SegoeUI-SemiBold.eot');
+    src: local('Font/Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+        url('Font/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Font/SegoeUI-SemiBold.woff2') format('woff2'),
+        url('Font/SegoeUI-SemiBold.woff') format('woff'),
+        url('Font/SegoeUI-SemiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
 }
 body {
-    font-family: 'segoeuithibd'!important;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 .searchWrapper .form-control:focus {
     box-shadow: none;
