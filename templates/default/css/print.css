@@ -18,3 +18,18 @@ a, a:focus, a:hover, a:visited {
 .print-btn, .mfp-close {
     display: none;
 }
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('Font/SegoeUI-SemiBold.eot');
+    src: local('Font/Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+        url('Font/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Font/SegoeUI-SemiBold.woff2') format('woff2'),
+        url('Font/SegoeUI-SemiBold.woff') format('woff'),
+        url('Font/SegoeUI-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+body {
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
+}
