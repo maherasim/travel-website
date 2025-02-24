@@ -12,20 +12,6 @@ define('PMS_MAINTENANCE_MODE', '0');
 define('PMS_MAINTENANCE_MSG', '<h1><i class=\"fa fa-rocket\"></i> Coming soon...</h1><p>We are sorry, our website is down for maintenance.</p>');
 define('PMS_TEMPLATE', 'default');
 define('PMS_OWNER', '');
-<<<<<<< HEAD
-define('PMS_EMAIL', 'solutionweb386@gmail.com');
-define('PMS_ADDRESS', 'sdfsdf');
-define('PMS_PHONE', '5345345');
-define('PMS_MOBILE', '4534534');
-define('PMS_FAX', '345345');
-define('PMS_DB_NAME', 'my_database');
-define('PMS_DB_HOST', 'localhost');
-define('PMS_DB_PORT', '3306');
-// define('PMS_DB_USER', 'Ahsan');
-define('PMS_DB_USER', 'root');
-// define('PMS_DB_PASS', 'Ahsan@786');
-define('PMS_DB_PASS', '');
-=======
 define('PMS_EMAIL', 'asimriazasim107@gmail.com');
 define('PMS_ADDRESS', '');
 define('PMS_PHONE', '');
@@ -36,7 +22,6 @@ define('PMS_DB_HOST', 'localhost');
 define('PMS_DB_PORT', '3306');
 define('PMS_DB_USER', 'kommodor_hotel');
 define('PMS_DB_PASS', 'Daniela972757');
->>>>>>> 6f461439da6d8440a0d04b5007a9c333063ee21e
 define('PMS_SENDER_EMAIL', '');
 define('PMS_SENDER_NAME', '');
 define('PMS_USE_SMTP', '0');
