@@ -622,13 +622,9 @@ body[dir="rtl"] .labels {
     margin-bottom: 20px;
     visibility: hidden;
     border-radius: 2px;
-    display:flex;
-    gap: 45px;
 }
 .isotopeWrapper.loaded .isotopeItem {
     visibility: visible;
-    display:flex;
-    gap: 45px;
 }
 .more-link {
     position: relative;
@@ -1204,9 +1200,4 @@ body#page-maintenance {
     .photo-section-small {
         grid-column: auto;
     }
-}
-
-.isotopeWrapper.loaded .isotopeItem {
-    display:flex;
-    gap: 45px;
 }
