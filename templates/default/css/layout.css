@@ -2,9 +2,26 @@
 
 /****************** GENERAL ******************/
 body {
-    font-family: "Open Sans";
+    font-family: 'Segoe UI';
     padding-top: 154px;
     font-size: 15px;
+}
+
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('Font/SegoeUI-SemiBold.eot');
+    src: local('Font/Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+        url('Font/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Font/SegoeUI-SemiBold.woff2') format('woff2'),
+        url('Font/SegoeUI-SemiBold.woff') format('woff'),
+        url('Font/SegoeUI-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+body {
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 @media(max-width:991px) {
@@ -22,8 +39,8 @@ h3,
 .widget-title {
     margin-top: 0;
     text-transform: uppercase;
-    font-weight: 600;
-    font-family: "Montserrat";
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     margin-bottom: 15px;
 }
 
@@ -309,16 +326,19 @@ blockquote {
 
 blockquote::before {
     content: "";
-    font-family: "Font Awesome 5 Free";
+    
     margin-right: 0.5em;
-    font-weight: 900;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
+     
 }
 
 blockquote::after {
     content: "";
-    font-family: "Font Awesome 5 Free";
+    
     margin-left: 0.5em;
-    font-weight: 900;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 blockquote p {
@@ -473,11 +493,12 @@ blockquote p {
 }
 
 .navbar-nav a.hasSubMenu::after {
-    font-family: "Font Awesome 5 Free";
+    
     content: "";
     position: absolute;
     right: 10px;
-    font-weight: 900;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 .navbar-nav>li>a.hasSubMenu::after {
@@ -531,9 +552,10 @@ li.Nactive>ul {
     content: "";
     cursor: pointer;
     display: block;
-    font-family: "Font Awesome 5 Free";
+   
     line-height: 30px !important;
-    font-weight: 900;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 li.Nactive>.dropdown-btn::after {
@@ -587,21 +609,7 @@ li.Nactive>.dropdown-btn::after {
     border-radius: 0;
 }
  
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('Font/SegoeUI-SemiBold.eot');
-    src: local('Font/Segoe UI Semibold'), local('SegoeUI-SemiBold'),
-        url('Font/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('Font/SegoeUI-SemiBold.woff2') format('woff2'),
-        url('Font/SegoeUI-SemiBold.woff') format('woff'),
-        url('Font/SegoeUI-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-body {
-    font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
-}
+
 .searchWrapper .form-control:focus {
     box-shadow: none;
 }
@@ -620,10 +628,11 @@ body {
 }
 
 .breadcrumb a::after {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     content: "";
     padding: 0 4px 0 6px;
-    font-weight: 900;
+     
 }
 
 /*************** ROYAL SLIDER ****************/
@@ -829,7 +838,7 @@ body[dir="rtl"] .breadcrumb span {
 
 body[dir="rtl"] .breadcrumb a::before {
     content: "";
-    font-family: "Font Awesome 5 Free";
+   
     padding: 0 6px 0 4px;
     font-weight: 900;
 }
@@ -947,12 +956,13 @@ body[dir="rtl"] .labels {
 }
 
 .lazy-more-btn::before {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     content: "";
     margin-right: 0.5em;
     font-size: 24px;
     vertical-align: middle;
-    font-weight: 900;
+    
 }
 
 /****************** SHARRRE ******************/
@@ -1020,7 +1030,8 @@ body[dir="rtl"] .labels {
 }
 
 .sharrre .share::before {
-    font-family: "Font Awesome 5 Brands";
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     content: "";
     margin-right: 6px;
     font-size: 18px;
@@ -1125,10 +1136,11 @@ p.focus-p {
 }
 
 #pages-list li a::before {
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     content: '';
     margin-right: 10px;
-    font-weight: 900;
+   
 }
 
 ul.nostyle {
@@ -1151,10 +1163,11 @@ ul.nostyle {
 #content ul:not(.nostyle):not(.pagination):not(.dropdown-menu) li::before {
     position: absolute;
     left: 4px;
-    font-family: "Font Awesome 5 Free";
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     content: '';
     margin-right: 10px;
-    font-weight: 900;
+  
 }
 
 .img-container {
@@ -1452,12 +1465,14 @@ body#page-maintenance {
 }
 
 .contact-info {
-    font-family: Verdana, Geneva;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     font-size: 12px;
 }
 
 .hb-days {
-    font-family: Georgia;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 .hb-day {
@@ -1465,34 +1480,40 @@ body#page-maintenance {
 }
 
 #mainFooter #footer .widget-title {
-    font-family: Verdana;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     font-size: 16px;
 }
 
 #mainFooter #footer p {
-    font-family: Verdana;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     font-size: 12px;
 }
 
 .card-sect .isotopeContent p {
-    font-family: Verdana;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     font-size: 12px;
 }
 
 #mainHeader #mainMenu ul li a,
 .mainHeader #secondMenu ul li a {
-    font-family: Verdana;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
     font-size: 16px !important;
 }
 
 .page-desc p {
     font-size: 12px;
-    font-family: verdana;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 .page-desc p {
     font-size: 12px;
-    font-family: verdana;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 /* card grid layout */
@@ -1500,7 +1521,8 @@ body#page-maintenance {
     font-size: 12px;
     margin-bottom: 2rem;
     line-height: 1.8;
-    font-family: Verdana, sans-serif;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 
@@ -1537,7 +1559,8 @@ body#page-maintenance {
 .text-section-wide p {
     font-size: 12px;
     line-height: 1.8;
-    font-family: Verdana;
+    font-family: 'Segoe UI' !important;
+    font-weight: 600 !important;
 }
 
 .text-section-wide {
