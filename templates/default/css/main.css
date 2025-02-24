@@ -13,34 +13,6 @@ body#page-1 {
 body:not(#page-1) {
     background: url("../images/page-header.jpg") no-repeat center 0;
 }
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('SegoeUI-Bold.eot');
-    src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
-        url('SegoeUI-Bold.eot?#iefix') format('embedded-opentype'),
-        url('SegoeUI-Bold.woff2') format('woff2'),
-        url('SegoeUI-Bold.woff') format('woff'),
-        url('SegoeUI-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-body {
-    font-family: 'Segoe UI' !important;
-    font-weight: bold;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 h1, h2, h3, .h1, .h2, .h3, .widget-title {
     text-transform: uppercase;
     font-weight: 600;
@@ -48,7 +20,7 @@ h1, h2, h3, .h1, .h2, .h3, .widget-title {
     word-spacing: 4px;
 }
 h1, .h1 {
-     font-weight: bold;;
+    font-weight: 400;
 }
 h3, .h3, .widget-title {
     font-size: 18px;
@@ -225,7 +197,7 @@ ul.navbar-nav > li.primary .dropdown-menu {
 }
 ul.navbar-nav > li.primary .dropdown-menu li a {
     line-height: 12px;
-     font-weight: bold;;
+    font-weight: 400;
 }
 #secondMenu .searchWrapper {
     margin: 0;
@@ -257,7 +229,7 @@ ul.navbar-nav > li.primary .dropdown-menu li a {
     text-align: center;
 }
 label small {
-     font-weight: bold;;
+    font-weight: 400;
 }
 /*************** ROYAL SLIDER ****************/
 #sliderContainer {
@@ -280,7 +252,7 @@ label small {
 .royalSlider .infoBlock h2 {
     color: #fff;
     font-size: 28px;
-     font-weight: bold;;
+    font-weight: 400;
     text-transform: none;
 }
 .royalSlider .infoBlock a {
@@ -416,7 +388,7 @@ aside h4 {
     position: relative;
     top: 36%;
     z-index: 1;
-     font-weight: bold;;
+    font-weight: 400;
     font-size: 18px;
     padding: 10px;
     display: inline-block;
@@ -452,7 +424,7 @@ aside h4 {
     min-height: 108px;
     max-height: 400px;
     font-size: 12px;
-    font-family: 'segoeuithibd', sans-serif !important;
+    font-family: Verdana;
     overflow: hidden;
     position: relative;
 }
