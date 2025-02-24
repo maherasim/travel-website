@@ -423,6 +423,8 @@ aside h4 {
 .text-overflow {
     min-height: 108px;
     max-height: 400px;
+    font-size: 12px;
+    font-family: Verdana;
     overflow: hidden;
     position: relative;
 }
