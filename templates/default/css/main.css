@@ -13,6 +13,31 @@ body#page-1 {
 body:not(#page-1) {
     background: url("../images/page-header.jpg") no-repeat center 0;
 }
+
+@font-face {
+    font-family: 'CustomFont'; /* Name to reference later */
+    src: url('fonts/customfont.woff2') format('woff2'),
+         url('fonts/customfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 h1, h2, h3, .h1, .h2, .h3, .widget-title {
     text-transform: uppercase;
     font-weight: 600;
