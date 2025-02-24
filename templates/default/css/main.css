@@ -15,16 +15,16 @@ body:not(#page-1) {
 }
 
 @font-face {
-    font-family: 'CustomFont'; /* Name to reference later */
-    src: url('fonts/customfont.woff2') format('woff2'),
-         url('fonts/customfont.woff') format('woff');
+    font-family: 'segoeuithibd'!important; /* Name to reference later */
+    src: url('Font/segoeuithibd.ttf') format('woff2') ,
+         url('Font/segoeuithibd.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: 'CustomFont', sans-serif;
-}
+    font-family: 'segoeuithibd', sans-serif !important;
+} 
 
 
 
