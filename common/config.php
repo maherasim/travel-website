@@ -13,10 +13,10 @@ define('PMS_MAINTENANCE_MSG', '<h1><i class=\"fa fa-rocket\"></i> Coming soon...
 define('PMS_TEMPLATE', 'default');
 define('PMS_OWNER', '');
 define('PMS_EMAIL', 'asimriazasim107@gmail.com');
-define('PMS_ADDRESS', '');
-define('PMS_PHONE', '');
-define('PMS_MOBILE', '');
-define('PMS_FAX', '');
+define('PMS_ADDRESS', 'Berlin germany ');
+define('PMS_PHONE', '23432423432');
+define('PMS_MOBILE', 'AS43435435');
+define('PMS_FAX', 'Berlinfax data here');
 define('PMS_DB_NAME', 'kommodor_hotel');
 define('PMS_DB_HOST', 'localhost');
 define('PMS_DB_PORT', '3306');
