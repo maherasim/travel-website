@@ -159,7 +159,7 @@ ul.navbar-nav > li.primary .dropdown {
 }
 .info-header svg {
     background: #fff;
-    color: #5381BA;
+    color: #0c68f1;
 }
 .searchWrapper {
     color: #888;
@@ -286,21 +286,21 @@ aside h3 {
     background: #fff;
 }
 .text-center h1::after, h1.text-center::after, [style*="text-align: center"] h1::after, h1[style*="text-align: center"]::after, .text-center h2::after, h2.text-center::after, [style*="text-align: center"] h2::after, h2[style*="text-align: center"]::after, .text-center h3::after, h3.text-center::after, [style*="text-align: center"] h3::after, h3[style*="text-align: center"]::after {
-    background: #506F9E;
+    background: #0c68f1;
 }
 /************* BOOKING RESULTS ***************/
 #booking-summary {
-    border: 1px solid #506F9E;
+    border: 1px solid #0c68f1;
 }
 #booking-summary .col-md-6:first-child {
-    background: #506F9E;
+    background: #0c68f1;
     color: #fff;
 }
 #booking-summary .col-md-6:first-child h2 {
     color: #fff;
 }
 #booking-summary big {
-    color: #506F9E;
+    color: #0c68f1;
 }
 .facility-icon {
     background: #fff none repeat scroll 0 0;
@@ -341,7 +341,7 @@ aside h3 {
     background: #e8e8e8;
 }
 #booking-breadcrumb .breadcrumb-item.done {
-    background: #506f9e;
+    background: #0c68f1;
     color: #fff;
 }
 #booking-breadcrumb .breadcrumb-item.active {
