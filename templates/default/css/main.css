@@ -15,66 +15,6 @@ body:not(#page-1) {
 }
 
 @font-face {
-    font-family: 'segoeuithibd'!important; /* Name to reference later */
-    src: url('Font/segoeuithibd.ttf') format('woff2') ,
-         url('Font/segoeuithibd.ttf') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'segoeuithibd', sans-serif !important;
-} 
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('SegoeUI-BoldItalic.eot');
-    src: local('Segoe UI Bold Italic'), local('SegoeUI-BoldItalic'),
-        url('SegoeUI-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('SegoeUI-BoldItalic.woff2') format('woff2'),
-        url('SegoeUI-BoldItalic.woff') format('woff'),
-        url('SegoeUI-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('SegoeUI.eot');
-    src: local('Segoe UI'), local('SegoeUI'),
-        url('SegoeUI.eot?#iefix') format('embedded-opentype'),
-        url('SegoeUI.woff2') format('woff2'),
-        url('SegoeUI.woff') format('woff'),
-        url('SegoeUI.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('SegoeUI-SemiBold.eot');
-    src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
-        url('SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('SegoeUI-SemiBold.woff2') format('woff2'),
-        url('SegoeUI-SemiBold.woff') format('woff'),
-        url('SegoeUI-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('SegoeUI-Light.eot');
-    src: local('Segoe UI Light'), local('SegoeUI-Light'),
-        url('SegoeUI-Light.eot?#iefix') format('embedded-opentype'),
-        url('SegoeUI-Light.woff2') format('woff2'),
-        url('SegoeUI-Light.woff') format('woff'),
-        url('SegoeUI-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Segoe UI';
     src: url('SegoeUI-Bold.eot');
     src: local('Segoe UI Bold'), local('SegoeUI-Bold'),
@@ -85,21 +25,9 @@ body {
     font-weight: bold;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'Segoe UI';
-    src: url('Font/SegoeUI-SemiBold.eot');
-    src: local('Font/Segoe UI Semibold'), local('SegoeUI-SemiBold'),
-        url('Font/SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('Font/SegoeUI-SemiBold.woff2') format('woff2'),
-        url('Font/SegoeUI-SemiBold.woff') format('woff'),
-        url('Font/SegoeUI-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
 body {
     font-family: 'Segoe UI' !important;
-    font-weight: 600 !important;
+    font-weight: bold;
 }
 
 
@@ -120,7 +48,7 @@ h1, h2, h3, .h1, .h2, .h3, .widget-title {
     word-spacing: 4px;
 }
 h1, .h1 {
-    font-weight: 400;
+     font-weight: bold;;
 }
 h3, .h3, .widget-title {
     font-size: 18px;
@@ -297,7 +225,7 @@ ul.navbar-nav > li.primary .dropdown-menu {
 }
 ul.navbar-nav > li.primary .dropdown-menu li a {
     line-height: 12px;
-    font-weight: 400;
+     font-weight: bold;;
 }
 #secondMenu .searchWrapper {
     margin: 0;
@@ -329,7 +257,7 @@ ul.navbar-nav > li.primary .dropdown-menu li a {
     text-align: center;
 }
 label small {
-    font-weight: 400;
+     font-weight: bold;;
 }
 /*************** ROYAL SLIDER ****************/
 #sliderContainer {
@@ -352,7 +280,7 @@ label small {
 .royalSlider .infoBlock h2 {
     color: #fff;
     font-size: 28px;
-    font-weight: 400;
+     font-weight: bold;;
     text-transform: none;
 }
 .royalSlider .infoBlock a {
@@ -488,7 +416,7 @@ aside h4 {
     position: relative;
     top: 36%;
     z-index: 1;
-    font-weight: 400;
+     font-weight: bold;;
     font-size: 18px;
     padding: 10px;
     display: inline-block;
