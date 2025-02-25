@@ -72,7 +72,8 @@ header, header * {
     display: inline-block;
     float: none;
     margin: 0;
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
+    font-family: 'Poppins', sans-serif;
 }
 .navbar-nav > li > a {
     padding-bottom: 8px;
@@ -423,8 +424,9 @@ aside h4 {
 .text-overflow {
     min-height: 108px;
     max-height: 400px;
-    font-size: 12px;
-    font-family: Verdana;
+    font-size: 14px;
+    /* font-family: Verdana; */
+    font-family: 'Poppins', sans-serif;
     overflow: hidden;
     position: relative;
 }
@@ -543,7 +545,8 @@ aside h4 {
 .activity-result .checkbox-icon:before {
     content: "";
     display: block;
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     font-size: 22px;
     height: 100%;
     line-height: 100%;

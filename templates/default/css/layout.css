@@ -2,7 +2,8 @@
 
 /****************** GENERAL ******************/
 body {
-    font-family: "Open Sans";
+    /* font-family: "Open Sans"; */
+    font-family: 'Poppins', sans-serif;
     padding-top: 154px;
     font-size: 15px;
 }
@@ -23,7 +24,8 @@ h3,
     margin-top: 0;
     text-transform: uppercase;
     font-weight: 600;
-    font-family: "Montserrat";
+    /* font-family: "Montserrat"; */
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 15px;
 }
 
@@ -290,7 +292,7 @@ h3::after {
     margin-bottom: 5px;
     padding: .3em .6em;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 label.control-label {
@@ -309,14 +311,16 @@ blockquote {
 
 blockquote::before {
     content: "";
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     margin-right: 0.5em;
     font-weight: 900;
 }
 
 blockquote::after {
     content: "";
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     margin-left: 0.5em;
     font-weight: 900;
 }
@@ -473,7 +477,8 @@ blockquote p {
 }
 
 .navbar-nav a.hasSubMenu::after {
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     content: "";
     position: absolute;
     right: 10px;
@@ -531,7 +536,8 @@ li.Nactive>ul {
     content: "";
     cursor: pointer;
     display: block;
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     line-height: 30px !important;
     font-weight: 900;
 }
@@ -605,7 +611,8 @@ li.Nactive>.dropdown-btn::after {
 }
 
 .breadcrumb a::after {
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     content: "";
     padding: 0 4px 0 6px;
     font-weight: 900;
@@ -814,7 +821,8 @@ body[dir="rtl"] .breadcrumb span {
 
 body[dir="rtl"] .breadcrumb a::before {
     content: "";
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     padding: 0 6px 0 4px;
     font-weight: 900;
 }
@@ -932,7 +940,8 @@ body[dir="rtl"] .labels {
 }
 
 .lazy-more-btn::before {
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     content: "";
     margin-right: 0.5em;
     font-size: 24px;
@@ -1005,7 +1014,8 @@ body[dir="rtl"] .labels {
 }
 
 .sharrre .share::before {
-    font-family: "Font Awesome 5 Brands";
+    /* font-family: "Font Awesome 5 Brands"; */
+    font-family: 'Poppins', sans-serif;
     content: "";
     margin-right: 6px;
     font-size: 18px;
@@ -1031,7 +1041,7 @@ body[dir="rtl"] .labels {
 .sharrre .share {
     color: #fff;
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     height: 32px;
     line-height: 32px;
@@ -1110,7 +1120,8 @@ p.focus-p {
 }
 
 #pages-list li a::before {
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     content: '';
     margin-right: 10px;
     font-weight: 900;
@@ -1136,7 +1147,8 @@ ul.nostyle {
 #content ul:not(.nostyle):not(.pagination):not(.dropdown-menu) li::before {
     position: absolute;
     left: 4px;
-    font-family: "Font Awesome 5 Free";
+    /* font-family: "Font Awesome 5 Free"; */
+    font-family: 'Poppins', sans-serif;
     content: '';
     margin-right: 10px;
     font-weight: 900;
@@ -1437,55 +1449,64 @@ body#page-maintenance {
 }
 
 .contact-info {
-    font-family: Verdana, Geneva;
-    font-size: 12px;
+    /* font-family: Verdana, Geneva; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 .hb-days {
-    font-family: Georgia;
+    /* font-family: Georgia; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .hb-day {
-    font-size: 12px !important;
+    font-size: 14px !important;
 }
 
 #mainFooter #footer .widget-title {
-    font-family: Verdana;
+    /* font-family: Verdana; */
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
 }
 
 #mainFooter #footer p {
-    font-family: Verdana;
-    font-size: 12px;
+    /* font-family: Verdana; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 .card-sect .isotopeContent p {
-    font-family: Verdana;
-    font-size: 12px;
+    /* font-family: Verdana; */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 #mainHeader #mainMenu ul li a,
 .mainHeader #secondMenu ul li a {
-    font-family: Verdana;
+    /* font-family: Verdana; */
+     font-family: 'Poppins', sans-serif;
     font-size: 16px !important;
 }
 
 .page-desc p {
-    font-size: 12px;
-    font-family: verdana;
+    font-size: 14px;
+    /* font-family: verdana; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .page-desc p {
-    font-size: 12px;
-    font-family: verdana;
+    font-size: 14px;
+    /* font-family: verdana; */
+    font-family: 'Poppins', sans-serif;
 }
 
 /* card grid layout */
 .main-description {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 2rem;
     line-height: 1.8;
-    font-family: Verdana, sans-serif;
+    /* font-family: Verdana, sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -1520,9 +1541,10 @@ body#page-maintenance {
 
 .text-section p,
 .text-section-wide p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.8;
-    font-family: Verdana;
+    /* font-family: Verdana; */
+    font-family: 'Poppins', sans-serif;
 }
 
 .text-section-wide {

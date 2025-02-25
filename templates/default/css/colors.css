@@ -58,7 +58,8 @@ blockquote {
 body:not(#page-1) .fixed #mainHeader,
 .fixed #mainHeader {
     /* background: #5381BA; */
-    background: url("../images/hf_layout.png") no-repeat center top fixed!important;
+    /* background: url("../images/hf_layout.png") no-repeat center top fixed!important; */
+    background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
     background-size: cover !important;
     -moz-background-size: cover !important;
     -webkit-background-size: cover !important;
@@ -75,7 +76,8 @@ header:not(.fixed) #mainHeader {
 @media (max-width: 991px) {
     #page-1 #mainHeader {
         /* background: rgba(83, 129, 186, 0.8); */
-        background: url("../images/hf_layout.png") no-repeat center top fixed!important;
+        /* background: url("../images/hf_layout.png") no-repeat center top fixed!important; */
+        background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
         background-size: cover !important;
         -moz-background-size: cover !important;
         -webkit-background-size: cover !important;
@@ -95,7 +97,12 @@ ul.navbar-nav > li.primary > a.firstLevel:focus {
 /*
     border-bottom: 1px solid #fff;
 */
-    color: #72D3B8;
+    /* color: #72D3B8; */
+     /* color: #8C8CFF; */
+     color: #8282E6;  /* Darker but still bright */
+     text-shadow: 0 0 5px #5A5AD1;  /* Softer, balanced glow */
+
+
     background: none;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -170,7 +177,8 @@ ul.navbar-nav > li.primary .dropdown {
     background: #5381BA;
 }
 .page-header {
-    background-color: #506f9e;
+    /* background-color: #506f9e; */
+    background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
     color: #fff;
     border: none;
 }
@@ -211,7 +219,8 @@ ul.navbar-nav > li.primary .dropdown {
     background: rgba(0, 0, 0, 0.3);
 }
 #search-page .container {
-    background: #6197d8;
+    /* background: #6197d8; */
+    background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
 }
 .booking-search .input-group-addon,
 .booking-search .form-control {
@@ -293,7 +302,8 @@ aside h3 {
     border: 1px solid #506F9E;
 }
 #booking-summary .col-md-6:first-child {
-    background: #506F9E;
+    /* background: #506F9E; */
+    background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
     color: #fff;
 }
 #booking-summary .col-md-6:first-child h2 {
@@ -341,7 +351,8 @@ aside h3 {
     background: #e8e8e8;
 }
 #booking-breadcrumb .breadcrumb-item.done {
-    background: #506f9e;
+    /* background: #506f9e; */
+    background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
     color: #fff;
 }
 #booking-breadcrumb .breadcrumb-item.active {
@@ -352,7 +363,8 @@ aside h3 {
     background: #5381BA;
 }
 .hotBox {
-    background: #5381BA;
+    /* background: #5381BA; */
+    
     color: #fff;
 }   
 .hotBox h2,
@@ -371,11 +383,13 @@ aside h3 {
 }
 /******************* FOOTER ******************/
 #footerRights {
-    background: #000;
+   background: rgba(0, 0, 0, 0.2);
+    /* background: #000; */
 }
 footer {
     /* background: #506f9e; */
-    background: url("../images/hf_layout.png") no-repeat center top fixed!important;
+    /* background: url("../images/hf_layout.png") no-repeat center top fixed!important; */
+    background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
     background-size: cover !important;
     -moz-background-size: cover !important;
     -webkit-background-size: cover !important;
@@ -421,7 +435,10 @@ footer .searchWrapper .form-control:-ms-input-placeholder {
 }
 /******************* LOADER ******************/
 #loader-wrapper {
-    background: #fff;
+    /* background: #2b0909; */
+    background: linear-gradient(135deg, #2E2EAA, #4D4DE3, #7A7AFC);
+
+    
 }
 #loader {
     border-top-color: #888;
