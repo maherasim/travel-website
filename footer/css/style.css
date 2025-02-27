@@ -1,0 +1,71 @@
+.footer-01 {
+  /* background: #0d1824; */
+  position: relative;
+  /* z-index: 0; */
+  overflow: hidden; }
+  .footer-01:after {
+    position: absolute;
+    top: -300px;
+    left: -100px;
+    width: 800px;
+    height: 800px;
+    content: '';
+    background: url(../images/blob-shape.svg);
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+    opacity: .05; }
+  .footer-01 .copyright {
+    color: rgba(255, 255, 255, 0.3);
+    color: #999999; }
+  .footer-01 .footer-heading {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative; }
+    .footer-01 .footer-heading:after {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      content: '';
+      width: 40px;
+      height: 2px;
+      background: #7f72e4; }
+  .footer-01 ul.list-unstyled li a {
+    color: rgba(255, 255, 255, 0.7); }
+  .footer-01 .block-21 .text .heading a {
+    color: rgba(255, 255, 255, 0.7); }
+  .footer-01 .block-21 .meta > div a {
+    color: #7f72e4; }
+  .footer-01 .block-23 ul li {
+    color: rgba(255, 255, 255, 0.6); }
+    .footer-01 .block-23 ul li a {
+      color: rgba(255, 255, 255, 0.6); }
+    .footer-01 .block-23 ul li .icon {
+      color: rgba(255, 255, 255, 0.4); }
+  .footer-01 .ftco-footer-social li a {
+    background: #7f72e4;
+    color: #fff; }
+
+    
+.ftco-footer-social li {
+  list-style: none;
+  margin: 0 10px 0 0;
+  display: inline-block; }
+  .ftco-footer-social li a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    position: relative; }
+    .ftco-footer-social li a span {
+      position: absolute;
+      font-size: 20px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .ftco-footer-social li a:hover {
+      color: #fff; }

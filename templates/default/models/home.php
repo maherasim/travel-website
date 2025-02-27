@@ -3,11 +3,13 @@
  * CSS AND JAVASCRIPT USED IN THIS MODEL
  * ==============================================
  */
+// $pms_stylesheets[] = array('file' => 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap', 'media' => 'all');
 $pms_stylesheets[] = array('file' => DOCBASE.'js/plugins/royalslider/royalslider.css', 'media' => 'all');
 $pms_stylesheets[] = array('file' => DOCBASE.'js/plugins/royalslider/skins/minimal-white/rs-minimal-white.css', 'media' => 'all');
+$pms_stylesheets[] = array('file' => DOCBASE.'css/custom.css', 'media' => 'all'); // New custom styles
 $pms_javascripts[] = DOCBASE.'js/plugins/royalslider/jquery.royalslider.min.js';
-
 $pms_javascripts[] = DOCBASE.'js/plugins/live-search/jquery.liveSearch.js';
+$pms_javascripts[] = DOCBASE.'js/home.js';
 
 require(pms_getFromTemplate('common/header.php', false));
 
@@ -20,16 +22,17 @@ if($result_slide !== false){
 	$nb_slides = $pms_db->last_row_count();
 	if($nb_slides > 0){ ?>
         
-        <div id="search-home-wrapper">
-            <div id="search-home" class="container">
-                <?php include(pms_getFromTemplate('common/search.php', false)); ?>
+        <div id="search-home-wrapper" class="animated slideInDown">
+            <div id="search-home" class="container search-floating">
+                <div class="search-card shadow-lg">
+                    <?php include(pms_getFromTemplate('common/search.php', false)); ?>
+                </div>
             </div>
         </div>
 	
-		<section id="sliderContainer">
-            
-			<div id="mainSlider" class="royalSlider rsMinW sliderContainer fullWidth clearfix fullSized">
-                <?php
+		<section id="sliderContainer" class="hero-slider">
+            <div id="mainSlider" class="royalSlider rsModernW sliderContainer fullWidth clearfix fullSized">
+            <?php
                 foreach($result_slide as $i => $row){
                     $slide_id = $row['id'];
                     $slide_legend = $row['legend'];
@@ -66,33 +69,32 @@ if($result_slide !== false){
                     }
                 } ?>
             </div>
+            <div class="slider-progress"></div>
 		</section>
-		<?php
-	}
+	<?php }
 } ?>
+
 <section id="content" class="pt20 pb30">
     <div class="container">
         
         <?php pms_displayWidgets('before_content', $pms_page_id); ?>
         
         <div class="row">
-            <div class="col-md-12 text-center mb30">
-                <h1 itemprop="name">
-                    <?php
-                    echo $page['title'];
-                    if($page['subtitle'] != ''){ ?>
-                        <br><small><?php echo $page['subtitle']; ?></small>
-                        <?php
-                    } ?>
+            <div class="col-md-12 text-center mb-5">
+                <h1 class="display-4 mb-3" itemprop="name">
+                    <?php echo $page['title']; ?>
+                    <?php if($page['subtitle'] != ''){ ?>
+                        <div class="subtitle mt-2"><?php echo $page['subtitle']; ?></div>
+                    <?php } ?>
                 </h1>
-                <?php echo $page['text']; ?>
+                <div class="lead text-muted max-w-800 mx-auto">
+                    <?php echo $page['text']; ?>
+                </div>
             </div>
         </div>
-        
-		<?php pms_displayWidgets('after_content', $pms_page_id); ?>
-        
-        <div class="row mb10">
-            <?php
+
+        <?php pms_displayWidgets('after_content', $pms_page_id); ?>
+        <?php
             $result_room = $pms_db->query('SELECT * FROM pm_room WHERE lang = '.PMS_LANG_ID.' AND checked = 1 AND home = 1 ORDER BY `rank`');
             if($result_room !== false){
                 $nb_rooms = $pms_db->last_row_count();
@@ -140,7 +142,7 @@ if($result_slide !== false){
                                             <img alt="<?php echo $label; ?>" data-src="<?php echo $thumbpath; ?>" itemprop="photo" width="<?php echo $s[0]; ?>" height="<?php echo $s[1]; ?>">
                                         </div>
                                         <div class="more-content">
-                                            <h3 itemprop="name"><?php echo $room_title; ?></h3>
+                                            <h3 style="border-radius: 10px;" itemprop="name"><?php echo $room_title; ?></h3>
                                             <?php
                                             if($min_price > 0){ ?>
                                                 <div class="more-descr">
@@ -325,4 +327,179 @@ if($result_slide !== false){
         }
     } ?>
     <?php pms_displayWidgets('full_after_content', $pms_page_id); ?>
+
+        <!-- Rooms Section Enhanced -->
+        <div class="row mb-5 room-grid">
+            <?php while($row = $result_room->fetch()){ ?>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <article class="card room-card shadow-sm hover-effect">
+                        <a href="<?php echo $room_alias; ?>" class="card-image">
+                            <div class="image-wrapper">
+                                <img src="<?php echo $thumbpath; ?>" alt="<?php echo $label; ?>" class="card-img-top">
+                                <div class="price-badge">
+                                    <?php if($min_price > 0){ ?>
+                                        <span class="badge">
+                                            <?php echo $pms_texts['FROM_PRICE']; ?>
+                                            <strong><?php echo pms_formatPrice($min_price*PMS_CURRENCY_RATE); ?></strong>
+                                        </span>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title"><?php echo $room_title; ?></h3>
+                            <?php if($room_subtitle){ ?>
+                                <p class="card-text text-muted"><?php echo $room_subtitle; ?></p>
+                            <?php } ?>
+                            <a href="<?php echo $room_alias; ?>" class="btn btn-primary">
+                                <?php echo $pms_texts['VIEW_DETAILS']; ?>
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            <?php } ?>
+        </div>
+
+        <!-- Activities Section -->
+        <?php if($nb_activities > 0){ ?>
+        <div class="activities-section py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5"><?php echo $pms_texts['FIND_ACTIVITIES_AND_TOURS']; ?></h2>
+                <div class="activity-carousel owl-carousel">
+                    <?php foreach($result_activity as $activity){ ?>
+                    <div class="activity-item">
+                        <div class="card shadow-sm">
+                            <img src="<?php echo $thumbpath; ?>" class="card-img-top" alt="<?php echo $activity_title; ?>">
+                            <div class="card-body">
+                                <h4 class="card-title"><?php echo $activity_title; ?></h4>
+                                <a href="<?php echo $activity_alias; ?>" class="btn btn-outline-primary">
+                                    <?php echo $pms_texts['LEARN_MORE']; ?>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+
+        <!-- Articles Section -->
+        <?php if($nb_articles > 0){ ?>
+        <div class="articles-section py-5">
+            <div class="container">
+                <div class="row">
+                    <?php foreach($result_article as $i => $article){ ?>
+                    <div class="col-lg-<?php echo ($i == 0) ? '12' : '4'; ?> mb-4">
+                        <div class="card article-card <?php echo ($i == 0) ? 'featured-article' : ''; ?>">
+                            <div class="row no-gutters">
+                                <?php if($i == 0){ ?>
+                                <div class="col-md-8">
+                                    <img src="<?php echo $thumbpath; ?>" class="card-img" alt="<?php echo $article_title; ?>">
+                                </div>
+                                <?php } ?>
+                                <div class="<?php echo ($i == 0) ? 'col-md-4' : 'col-12'; ?>">
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?php echo $article_title; ?></h3>
+                                        <div class="card-text"><?php echo $article_text; ?></div>
+                                        <a href="<?php echo $article_alias; ?>" class="btn btn-link read-more">
+                                            <?php echo $pms_texts['READMORE']; ?>
+                                            <i class="fas fa-long-arrow-alt-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+
+    </div>
 </section>
+
+<style>
+/* Modern CSS Enhancements */
+:root {
+    --primary-color: #2a4365;
+    --secondary-color: #c53030;
+    --accent-color: #f6ad55;
+    --text-dark: #2d3748;
+    --text-light: #718096;
+}
+
+
+.hero-slider {
+    position: relative;
+    /* height: 80vh; */
+    overflow: hidden;
+}
+
+.search-floating {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100%;
+    max-width: 999px;
+}
+
+.room-card {
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+}
+
+.price-badge .badge {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.featured-article {
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.read-more {
+    color: var(--primary-color);
+    position: relative;
+    padding-right: 25px;
+}
+
+.read-more i {
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.read-more:hover i {
+    transform: translateY(-50%) translateX(5px);
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+</style>
